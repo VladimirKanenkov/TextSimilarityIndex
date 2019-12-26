@@ -27,7 +27,44 @@ namespace TextSimilarityIndex
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.TextBlock.Text = "0";
+            this.TextBlock.Text = "КСТ=" + Controller.CalculateSimTextIndex(LeftBox.Text, RightBox.Text).ToString();
         }
     }
+
+    public static class Controller
+    {
+        /// <summary>
+        /// Вычисление коэффициента совпадения двух текстов
+        /// </summary>
+        /// <param name="TextLeft"></param>
+        /// <param name="TextRight"></param>
+        /// <returns></returns>
+        public static double CalculateSimTextIndex(string textLeft, string textRight)
+        {
+            double  simIndex = 0;
+
+
+            return simIndex;
+
+        }
+
+        /// <summary>
+        /// Список слов из текста, с количеством вхождений каждого слова
+        /// </summary>
+        /// <param name="text"></param>
+        static void SplitIntoWords (string text)
+        {
+            List<Word> TextList = new List<Word>();
+
+        }
+    }
+
+    public class Word
+    {
+        public int Count { get; set; }
+        public string Element { get; set; }
+    }
+
+    
+
 }
